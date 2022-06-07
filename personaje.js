@@ -52,8 +52,8 @@ ctx.rotate(-this.angle*Math.PI/180)
 }
 let Jeoirginha = new Personaje(200,100,0,50)
 Jeoirginha.dibujarse();
-let Pablito = new Personaje(200,300,90,50)
-Pablito.dibujarse();
+let Josu = new Personaje(200,300,90,50)
+Josu.dibujarse();
 
 let contenedor =  document.querySelector("#contenedor")
 contenedor.innerHTML = "Clica en los personajes para que desaparezcan :DDDD";
@@ -72,4 +72,12 @@ ctx.rect(0,0,1000,1000)
 ctx.stroke()
 ctx.fill()
 }
+if((XM-Josu.x)**2+(YM-Josu.y)**2<=Josu.r**2){
+    ctx.fillStyle="white"
+    ctx.strokeStyle="white"
+    ctx.beginPath()
+    ctx.rect(0,0,1000,1000)
+    ctx.stroke()
+    ctx.fill()
+    }
 })
