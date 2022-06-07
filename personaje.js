@@ -9,7 +9,7 @@ class Personaje{
     }
     dibujarse(){
 ctx.translate(this.x,this.y);
-ctx.rotate(this.angle*Math.PI)
+ctx.rotate(this.angle*Math.PI/180)
 ctx.beginPath();
 ctx.arc(0,0,this.r,0,2*Math.PI);
 ctx.stroke();
@@ -47,11 +47,12 @@ ctx.moveTo(18,0)
 ctx.lineTo(18,1)
 ctx.stroke()
 ctx.translate(-this.x,-this.y)
+ctx.rotate(-this.angle*Math.PI/180)
     }
 }
 let Jeoirginha = new Personaje(200,100,0,50)
 Jeoirginha.dibujarse();
-let Pablito = new Personaje(200,300,0,50)
+let Pablito = new Personaje(200,300,90,50)
 Pablito.dibujarse();
 
 let contenedor =  document.querySelector("#contenedor")
