@@ -61,7 +61,6 @@ let b= document.querySelector("body")
 b.addEventListener("click", function (e){
     console.log("Se hizo click")
     console.log(e)
-})
 let XM= e.offsetX;
 let YM= e.offsetY;
 if((XM-Jeoirginha.x)**2+(YM-Jeoirginha.y)**2<=Jeoirginha.r**2){
@@ -72,3 +71,4 @@ ctx.rect(300,-300,1000,1000)
 ctx.stroke()
 ctx.fill()
 }
+})
