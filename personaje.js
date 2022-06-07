@@ -67,7 +67,7 @@ if((XM-Jeoirginha.x)**2+(YM-Jeoirginha.y)**2<=Jeoirginha.r**2){
 ctx.fillStyle="white"
 ctx.strokeStyle="white"
 ctx.beginPath()
-ctx.rect(300,-300,1000,1000)
+ctx.rect(0,0,1000,1000)
 ctx.stroke()
 ctx.fill()
 }
