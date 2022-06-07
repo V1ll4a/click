@@ -54,14 +54,17 @@ Jeoirginha.dibujarse();
 let Pablito = new Personaje(200,300,0,50)
 Pablito.dibujarse();
 
+let contenedor =  document.querySelector("#contenedor")
+contenedor.innerHTML = "Clica en los personajes para que desaparezcan :DDDD";
+
 let b= document.querySelector("body")
-b.addEventListener("click", function(e){
+b.addEventListener("click", function (e){
     console.log("Se hizo click")
     console.log(e)
 })
-let xM= e.offsetx
-let yM= e.offsety
-if((xM-Jeoirginha.x)**2+(yM-Jeoirginha.y)**2<=Jeoirginha**2){
+let XM= e.offsetX;
+let YM= e.offsetY;
+if((XM-Jeoirginha.x)**2+(YM-Jeoirginha.y)**2<=Jeoirginha.r**2){
 ctx.fillStyle="white"
 ctx.strokeStyle="white"
 ctx.beginPath()
@@ -69,5 +72,3 @@ ctx.rect(300,-300,1000,1000)
 ctx.stroke()
 ctx.fill()
 }
-let contenedor =  document.querySelector("#contenedor")
-contenedor.innerHTML = "Clica en los personajes para que desaparezcan :DDDD";
