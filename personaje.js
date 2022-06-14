@@ -58,8 +58,7 @@ Josu.dibujarse();
 let contenedor =  document.querySelector("#contenedor")
 contenedor.innerHTML = "Clica en los personajes para que desaparezcan :DDDD";
 
-let b= document.querySelector("body")
-b.addEventListener("click", function (e){
+canvas.addEventListener("click", function (e){
     console.log("Se hizo click")
     console.log(e)
 let XM= e.offsetX;
