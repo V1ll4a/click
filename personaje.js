@@ -46,8 +46,8 @@ ctx.beginPath()
 ctx.moveTo(18,0)
 ctx.lineTo(18,1)
 ctx.stroke()
-ctx.translate(-this.x,-this.y)
 ctx.rotate(-this.angle*Math.PI/180)
+ctx.translate(-this.x,-this.y)
     }
 }
 let Jeoirginha = new Personaje(200,100,0,50)
@@ -60,23 +60,20 @@ contenedor.innerHTML = "Clica en los personajes para que desaparezcan :DDDD";
 
 canvas.addEventListener("click", function (e){
     console.log("Se hizo click")
-    console.log(e)
-let XM= e.offsetX;
-let YM= e.offsetY;
-if((XM-Jeoirginha.x)**2+(YM-Jeoirginha.y)**2<=Jeoirginha.r**2){
-ctx.fillStyle="white"
-ctx.strokeStyle="white"
+    let XM=e.offsetX
+    let YM=e.offsetY
+    console.log(XM,YM)
+if((XM-Jeoirginha.x)**2+(YM-Jeoirginha.y)**2<=(Jeoirginha.r)**2){
+ctx.fillStyle="White"
 ctx.beginPath()
-ctx.rect(0,0,1000,1000)
-ctx.stroke()
+ctx.rect(140,45,120,120)
 ctx.fill()
 }
 if((XM-Josu.x)**2+(YM-Josu.y)**2<=Josu.r**2){
-    ctx.fillStyle="white"
-    ctx.strokeStyle="white"
+    ctx.fillStyle="White"
+    
     ctx.beginPath()
-    ctx.rect(0,0,1000,1000)
-    ctx.stroke()
+    ctx.rect(140,248,120,120)
     ctx.fill()
     }
 })
